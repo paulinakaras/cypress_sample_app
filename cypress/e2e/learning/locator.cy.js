@@ -6,6 +6,8 @@ describe("learn about locators", () => {
     });
 
     it("can locate a button on a page", () => {
-        cy.get('.gLFyf');
+        cy.get('.gLFyf')
+            .should("be.empty")
+            .and("be.visible");
     });
 });
