@@ -14,7 +14,7 @@ describe("interacting with input field", () => {
     });
 
     it("click on input field - aliases", () => {
-        cy.get('#L2AGLb > .QS5gu').as("acceptAllButton");
+        cy.get('#L2AGLb > .QS5gu').as("acceptAllButton"); //alias - zastępowanie niezrozumiałych nazwa na b.czytelne
         cy.get('.gLFyf').as("searchInput");
 
         cy.get('@acceptAllButton').click();
@@ -35,7 +35,7 @@ describe("interacting with input field", () => {
         cy.get('@dropdown').find('li').eq(1).contains('I Don\'t Want to Talk About It');
 
         cy.get('@dropdown').find('li').eq(1).click();
-        cy.contains('I Don\'t Want to Talk About It');
+        cy.contains('I Don\'t Want to Talk About It'); //antypatrn powinno być cy.get('xx').contains('text') ograniczenie cypressa
     });
 
     it("click on input field, type some text and tap enter button", () => {
