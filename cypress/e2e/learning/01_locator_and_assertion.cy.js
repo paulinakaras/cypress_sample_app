@@ -2,7 +2,7 @@
 //po wpisaniu cy. (obiekt cypressowy) pojawią się dostępne metody
 
 describe("learn about locators", () => {
-    it("visit google home page", () => {
+    before("visit google home page", () => {
         cy.visit("https://google.com"); //otwarcie strony którą będę testować
     });
 
