@@ -1,4 +1,5 @@
-/// <reference types="cypress" />
+/// <reference types="cypress" /> 
+//po wpisaniu cy. (obiekt cypressowy) pojawią się dostępne metody
 
 describe("learn about locators", () => {
     it("visit google home page", () => {

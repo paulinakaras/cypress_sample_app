@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 describe("interacting with input field", () => {
-    beforeEach(() => {
+    beforeEach(() => { //Hooki - before, beforeEach, beforeAfter
         cy.visit("https://google.com");
     })
     
