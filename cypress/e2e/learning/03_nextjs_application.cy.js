@@ -1,11 +1,9 @@
 /// <reference types="cypress" /> 
 
 describe("learn with local application setup", () => {
-    before("visit Next.js MongoDB app home page", () => {
+    beforeEach("visit Next.js MongoDB app home page", () => {
         cy.visit("http://localhost:3000"); 
-    });
 
-    it("check initial elements on home page screen", () => {
         cy.get(".Nav_logo__F5_LT").as("navigationMenuTitle");
         cy.get(".Hero_nextjs__ITLdD").as("nextJsMainTitle");
         cy.get(".Hero_mongodb__UtOPV").as("mongoDbMainTitle");
@@ -17,7 +15,9 @@ describe("learn with local application setup", () => {
         cy.get(".Hero_subtitle__gZIZW").as("descriptionText");
         cy.get("p.Text_text__1cTfE").as("footerText");
         cy.get(".ThemeSwitcher_select__cNL7P").as("footerButton");
-            
+    });
+
+    it("check initial elements on home page screen", () => {
         cy.get("@navigationMenuTitle").should("be.visible");
         cy.get("@nextJsMainTitle").should("be.visible");
         cy.get("@mongoDbMainTitle").should("be.visible");
@@ -29,5 +29,9 @@ describe("learn with local application setup", () => {
         cy.get("@descriptionText").should("be.visible");
         cy.get("@footerText").should("be.visible");
         cy.get("@footerButton").should("be.visible");
+    });
+
+    it("user should be able to sign up", () => {
+        cy.get("@signUpButton").click();
     });
 });
