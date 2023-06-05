@@ -13,6 +13,11 @@ First application with Cypress library for training purposes.
 - `git commit -m "title"`
 - `git push -u origin main`
 
+## First instalation commands
+
+- `npm init -y` - create package.json file
+- `npm install cypress` - installing cypress dependency
+
 ## Cypress commands
 
 - `node_modules/.bin/cypress open` opens inital cypress web view
